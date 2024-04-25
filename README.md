@@ -2,11 +2,11 @@
 
 ### By Kristen Kamouh & Olexendr Ghanem
 
-## Key Features:
+## Overview:
 
 The CSC320 Final Project involves the development of a MIPS Assembly language calculator, focusing on implementing the "Memory and History" feature. This feature enhances the calculator's functionality by allowing users to store and recall previous results or intermediate values.
 
-## Project Requirements:
+## Key Features:
 
 ### 1. Basic Calculator Functions:
 - **Arithmetic Operations**: Implement addition, subtraction, multiplication, and division.
