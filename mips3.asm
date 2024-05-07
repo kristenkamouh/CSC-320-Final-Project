@@ -2,6 +2,16 @@
 #		Kristen Al Kamouh & 
 # 		Olenxendr Ghanem
 
+
+# # # # # # # # # # # # # # # TODO # # # # # # # # # # # # # # # # # # # 
+#								       #
+# - MEMORY FEATURE						       #
+# - DRAWING THE NUMBERS ON THE BITMAP + MAKE THEM BUTTONS   	       #
+# - DISPLAY THE RESULT IN THE ANSWER BOX ON THE BITMAP DISPLAY	       #
+#								       #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  #
+
+
 # variables
 .data
 	intro:	.asciiz "Welcome to the simple calculator \n"
