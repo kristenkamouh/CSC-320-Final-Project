@@ -6,8 +6,8 @@
 
 # variables
 .data
-	intro: .asciiz "Welcome to the simple calculator \n"
-	opQ: .asciiz "Do you want to solve a(n):\n(1)addition problem\n(2)subraction problem\n(3)integer multiplication problem\n(4)integer division problem\n(5)modulo problem\n(6)square problem\n(7)factorial problem\n(8)sum(n,m) problem\n(9)powers problem\n"
+	intro: .asciiz "Welcome to MaxiCalc \n"
+	opQ: .asciiz "What do you want to solve:\n1- addition problem\n2- subraction problem\n3- integer multiplication problem\n4- integer division problem\n5- modulo problem\n6- square problem\n7- factorial problem\n8- sum(n,m) problem\n9- powers problem\n"
 	varA: .asciiz "Enter your first number: "
 	additionText: .asciiz "addition problem?\n"
 	subtractionText: .asciiz "subtraction problem?\n"
@@ -20,12 +20,12 @@
 	sumText: .asciiz "sum problem?\n"
 	sumWarningText:	.asciiz "***Please make sure your first variable is smaller than your second variable***\n***Please use non-negative numbers***\n"
 	powersText: .asciiz "powers problem? [x^n, n>=0]\n"
-	powersWarningText: .asciiz "***This fucntion deals with non-negative numbers***\n"
+	powersWarningText: .asciiz "**ENTER NON-NEGATIVE NUMBERS**\n"
 	varB: .asciiz "Enter your second number: "
 	res: .asciiz "The answer is: "
 	decimal: .asciiz "."
 	spacer: .asciiz "\n"
-	contQ: .asciiz "\nDo you want to solve another problem? Yes(1) or No(2)?\n"
+	contQ: .asciiz "\nDo you want to solve another problem? Yes (1) or No (2) ?\n"
 	gB: .asciiz "Goodbye!"
 	zero: .asciiz "0"
 	one: .asciiz "1"
