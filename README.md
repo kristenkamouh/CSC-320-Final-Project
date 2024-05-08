@@ -9,7 +9,8 @@ The CSC320 Final Project involves the development of a MIPS Assembly language ca
 ## Key Features:
 
 ### 1. Calculator Functions:
-- **Arithmetic Operations**: Implement addition, subtraction, multiplication, division, modulo, square, factorial, sum(m, n) and power.
+- **Arithmetic Operations**: Implement addition, subtraction, multiplication, division and modulo.
+- **Other Operations**: square, factorial, sum(m, n) and power.
 
 ### 2. Memory Functionality:
 - **Memory Feature**: Develop a feature enabling users to store and recall values using memory registers. Operations such as storing the current result, recalling stored values, clearing memory, and performing arithmetic operations on memory values should be supported.
