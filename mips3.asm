@@ -1,4 +1,4 @@
-# 		CSC320 Final  
+# 		CSC320 Final Project
 #		Kristen Al Kamouh & 
 # 		Olexandr Ghanem
 
@@ -598,3 +598,9 @@
 
 		li $v0, 10
 		syscall
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# In the extra folder, you'll find the background image utilized for the bitmap display feature. Presently, the functionality is limited to loading the image itself. There are no interactive elements such as buttons or controls overlaid on the image.
