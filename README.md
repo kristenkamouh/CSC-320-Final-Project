@@ -3,8 +3,7 @@
 ### By Kristen Kamouh & Olexandr Ghanem
 
 ## Overview:
-
-The CSC320 Final Project involves the development of a MIPS Assembly language calculator, focusing on implementing the "Memory and History" feature. This feature enhances the calculator's functionality by allowing users to store and recall previous results or intermediate values.
+MaxiCalc is a comprehensive calculator program designed to perform a wide range of mathematical operations. It provides a user-friendly interface for performing arithmetic calculations, as well as more advanced operations such as exponentiation, factorials, and modulo operations.
 
 ## Key Features:
 
@@ -16,16 +15,19 @@ The CSC320 Final Project involves the development of a MIPS Assembly language ca
 - **Memory Feature**: Develop a feature enabling users to store and recall values using memory registers. Operations such as storing the current result, recalling stored values, clearing memory, and performing arithmetic operations on memory values should be supported.
 
 ### 3. User Interface:
-- **User-Friendly Interface**: Create a text-based interface with menus and prompts for input and output. Ensure ease of navigation through calculator functions and memory/history features.
+- **User-Friendly Interface**: 
+  - Implemented a text-based interface with menus and prompts for input and output.
+  - Ensured ease of navigation through calculator functions and memory/history features.
 
 ### 4. Error Handling:
-- **Robust Error Handling**: Implement input validation to handle invalid inputs, division by zero, overflow/underflow conditions, and other potential errors gracefully.
-
-## Additional Features (Optional):
-
-### History Logging:
-- **Logging Feature**: Implement a history feature that records user interactions and calculations along with timestamps. Users should be able to view and clear calculation history.
-
+- **Robust Error Handling**: 
+  - Implemented input validation to handle:
+    - Invalid inputs
+    - Division by zero
+    - Overflow/underflow conditions
+    - Other potential errors gracefully.
+   
+    
 ---
 
 ### CSC320—Computer Organization
