@@ -1,6 +1,6 @@
 # CSC320 MIPS Assembly Calculator Documentation
 
-### By Kristen Kamouh & Olexandr Ghanem
+### By Kristen Kamouh, Olexandr Ghanem and Rabih Housami
 
 ## Overview:
 MaxiCalc is a comprehensive calculator program designed to perform a wide range of mathematical operations. It provides a user-friendly interface for performing arithmetic calculations, as well as more advanced operations such as exponentiation, factorials, and modulo operations.
