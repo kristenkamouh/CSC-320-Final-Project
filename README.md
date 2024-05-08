@@ -1,6 +1,6 @@
 # CSC320 MIPS Assembly Calculator Documentation
 
-### By Kristen Kamouh & Olexendr Ghanem
+### By Kristen Kamouh & Olexandr Ghanem
 
 ## Overview:
 
