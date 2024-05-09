@@ -1,6 +1,7 @@
 # 		CSC320 Final Project
-#		Kristen Al Kamouh & 
-# 		Olexandr Ghanem
+#		Kristen Al Kamouh,
+# 		Olexandr Ghanem &
+#		Rabih Houssami
 
 
 
@@ -142,462 +143,462 @@
 			j again
 	
 
-	subtractionFunction:
-		#var1Q
-		li $v0, 4
-		la $a0, varA
-		syscall
-		li $v0, 4
-		la $a0, subtractionText
-		syscall
-		li $v0, 5
-		syscall
-		move $t1, $v0
-		
-		#var2Q
-		li $v0, 4
-		la $a0, varB
-		syscall
-		li $v0, 4
-		la $a0, subtractionText
-		syscall
-		li $v0, 5
-		syscall
-		move $t2, $v0
-
-		#operation
-		sub $t3, $t1, $t2
+		subtractionFunction:
+			#var1Q
+			li $v0, 4
+			la $a0, varA
+			syscall
+			li $v0, 4
+			la $a0, subtractionText
+			syscall
+			li $v0, 5
+			syscall
+			move $t1, $v0
+			
+			#var2Q
+			li $v0, 4
+			la $a0, varB
+			syscall
+			li $v0, 4
+			la $a0, subtractionText
+			syscall
+			li $v0, 5
+			syscall
+			move $t2, $v0
 	
-		#print
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 1
-		move $a0, $t3
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-		j again
-
-
-	multiplicationFunction:
-		#var1Q
-		li $v0, 4
-		la $a0, varA
-		syscall
-		li $v0, 4
-		la $a0, multiplicationText
-		syscall
-		li $v0, 5
-		syscall
-		move $t1, $v0
+			#operation
+			sub $t3, $t1, $t2
 		
-		#var2Q
-		li $v0, 4
-		la $a0, varB
-		syscall
-		li $v0, 4
-		la $a0, multiplicationText
-		syscall
-		li $v0, 5
-		syscall
-		move $t2, $v0
+			#print
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 1
+			move $a0, $t3
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+			j again
 
-		#operation
-		mul $t3, $t1, $t2
+
+		multiplicationFunction:
+			#var1Q
+			li $v0, 4
+			la $a0, varA
+			syscall
+			li $v0, 4
+			la $a0, multiplicationText
+			syscall
+			li $v0, 5
+			syscall
+			move $t1, $v0
+			
+			#var2Q
+			li $v0, 4
+			la $a0, varB
+			syscall
+			li $v0, 4
+			la $a0, multiplicationText
+			syscall
+			li $v0, 5
+			syscall
+			move $t2, $v0
 	
-		#print
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 1
-		move $a0, $t3
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-		j again
-
-
-	divisionFunction:
-    		# Prompt for first number
-    		li $v0, 4
-    		la $a0, varA
-    		syscall
-    
-    		# Read first number
-    		li $v0, 5
-   		syscall
-    		move $t0, $v0
-       
-    		# Prompt for second number
-    		li $v0, 4
-    		la $a0, varB
-    		syscall
-    
-    		# Read second number
-    		li $v0, 5  
-    		syscall
-    		move $t1, $v0
-    		beqz $t1, division_by_zero  # Branch if divisor (t1) is zero
-
-    		# Store $t0 to $t4 to preserve it
-   		 move $t4, $t0
-    
-    		# Perform integer division
-    		div $t0, $t0, $t1   # $t0 = $t0 / $t1
-    
-    		# Store remainder in $t2
-    		mfhi $t2  # $t2 = $t0 % $t1
-    
-    		# Convert remainder to decimal part (2 decimal places)
-    		mul $t2, $t2, 100
-    
-    		# Calculate decimal part
-    		div $t2, $t2, $t1   # $t2 = $t2 / $t1
-
-    		# Display division result (integer part)
-    		li $v0, 4
-    		la $a0, res
-    		syscall
-    		li $v0, 1
-    		move $a0, $t0
-    		syscall
-
-    		# Display decimal point
-    		li $v0, 4
-    		la $a0, decimal
-    		syscall
-
-   		# Check if the decimal part is less than 10
-    		# If so, print a leading zero
-    		li $t3, 10
-    		bge $t2, $t3, skipLeadingZero
-    		li $v0, 4
-    		la $a0, zero
-    		syscall
-
-	skipLeadingZero:
-    		move $a0, $t2
-    		li $v0, 1
-    		syscall
-
-    		# Restore $t0
-    		move $t0, $t4
-
-    		# Display spacer
-    		li $v0, 4
-    		la $a0, spacer
-    		syscall
-
-    		j again
+			#operation
+			mul $t3, $t1, $t2
+		
+			#print
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 1
+			move $a0, $t3
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+			j again
+	
+	
+		divisionFunction:
+	    		# Prompt for first number
+	    		li $v0, 4
+	    		la $a0, varA
+	    		syscall
+	    
+	    		# Read first number
+	    		li $v0, 5
+	   		syscall
+	    		move $t0, $v0
+	       
+	    		# Prompt for second number
+	    		li $v0, 4
+	    		la $a0, varB
+	    		syscall
+	    
+	    		# Read second number
+	    		li $v0, 5  
+	    		syscall
+	    		move $t1, $v0
+	    		beqz $t1, division_by_zero  # Branch if divisor (t1) is zero
+	
+	    		# Store $t0 to $t4 to preserve it
+	   		 move $t4, $t0
+	    
+	    		# Perform integer division
+	    		div $t0, $t0, $t1   # $t0 = $t0 / $t1
+	    
+	    		# Store remainder in $t2
+	    		mfhi $t2  # $t2 = $t0 % $t1
+	    
+	    		# Convert remainder to decimal part (2 decimal places)
+	    		mul $t2, $t2, 100
+	    
+	    		# Calculate decimal part
+	    		div $t2, $t2, $t1   # $t2 = $t2 / $t1
+	
+	    		# Display division result (integer part)
+	    		li $v0, 4
+	    		la $a0, res
+	    		syscall
+	    		li $v0, 1
+	    		move $a0, $t0
+	    		syscall
+	
+	    		# Display decimal point
+	    		li $v0, 4
+	    		la $a0, decimal
+	    		syscall
+	
+	   		# Check if the decimal part is less than 10
+	    		# If so, print a leading zero
+	    		li $t3, 10
+	    		bge $t2, $t3, skipLeadingZero
+	    		li $v0, 4
+	    		la $a0, zero
+	    		syscall
+	
+		skipLeadingZero:
+	    		move $a0, $t2
+	    		li $v0, 1
+	    		syscall
+	
+	    		# Restore $t0
+	    		move $t0, $t4
+	
+	    		# Display spacer
+	    		li $v0, 4
+	    		la $a0, spacer
+	    		syscall
+	
+	    		j again
+	    		
+	    	division_by_zero:
+	  		# Print error message for division by zero
+	  		li $v0, 4
+	  		la $a0, division_by_zero_message  # Load address of error message string
+	  		syscall
+	
+	  		j divisionFunction
     		
-    	division_by_zero:
-  		# Print error message for division by zero
-  		li $v0, 4
-  		la $a0, division_by_zero_message  # Load address of error message string
-  		syscall
-
-  		j divisionFunction
     		
-    		
-	moduloFunction:
-		#var1Q
-		li $v0, 4
-		la $a0, varA
-		syscall
-		li $v0, 4
-		la $a0, moduloText
-		syscall
-		li $v0, 5
-		syscall
-		move $t1, $v0
+		moduloFunction:
+			#var1Q
+			li $v0, 4
+			la $a0, varA
+			syscall
+			li $v0, 4
+			la $a0, moduloText
+			syscall
+			li $v0, 5
+			syscall
+			move $t1, $v0
+			
+			#var2Q
+			li $v0, 4
+			la $a0, varB
+			syscall
+			li $v0, 4
+			la $a0, moduloText
+			syscall
+			li $v0, 5
+			syscall
+			move $t2, $v0
+	
+			#exception handeling
+			bltz $t1, moduloFunction
+			bltz $t2, moduloFunction
+	
+			#operation
+			rem $t3, $t1, $t2
 		
-		#var2Q
-		li $v0, 4
-		la $a0, varB
-		syscall
-		li $v0, 4
-		la $a0, moduloText
-		syscall
-		li $v0, 5
-		syscall
-		move $t2, $v0
-
-		#exception handeling
-		bltz $t1, moduloFunction
-		bltz $t2, moduloFunction
-
-		#operation
-		rem $t3, $t1, $t2
-	
-		#print
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 1
-		move $a0, $t3
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-		j again
-
-
-	squareFunction:
-		#var1Q
-		li $v0, 4
-		la $a0, squareText
-		syscall
-		li $v0, 5
-		syscall
-		move $t1, $v0
-	
-		#operation
-		mul $t2, $t1, $t1
-	
-		#print
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 1
-		move $a0, $t2
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-
-		j again
+			#print
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 1
+			move $a0, $t3
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+			j again
 	
 	
-	factorialFunctionStart:
-		#var1Q
-		li $v0, 4
-		la $a0, factorialText
-		syscall
-		li $v0, 5
-		syscall
-		move $t1, $v0
-
-		add $t7, $t1, 0
-		sub $t7, $t7, 1
-
-		#special cases for factorial
-		bltz $t1, factorialFunctionStart
-		beq $t1, 0, ans1
-		beq $t1, 1, ans1
-		j factorialFunctionLoop
-
-
-	factorialFunctionLoop:
-		mul $t1, $t1, $t7
-		sub $t7, $t7, 1
-		bne $t7, 0, factorialFunctionLoop
-		j factorialAns
-
-
-	factorialAns:
-		#print
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 1
-		move $a0, $t1
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-		j again
-
-
-	sumFunction:
-		#var1Q
-		li $v0, 4
-		la $a0, sumWarningText
-		syscall
-		li $v0, 4
-		la $a0, varA
-		syscall
-		li $v0, 4
-		la $a0, sumText
-		syscall
-		li $v0, 5
-		syscall
-		move $t1, $v0
+		squareFunction:
+			#var1Q
+			li $v0, 4
+			la $a0, squareText
+			syscall
+			li $v0, 5
+			syscall
+			move $t1, $v0
 		
-		#var2Q
-		li $v0, 4
-		la $a0, varB
-		syscall
-		li $v0, 4
-		la $a0, sumText
-		syscall
-		li $v0, 5
-		syscall
-		move $t2, $v0
-
-		#register set asside
-		add $t3, $t1, 0
-
-		#Exception handling
-		bltz $t1, factorialFunctionStart
-		slt $t5, $t1, $t2
-		bne $t5, 1, sumFunction
-		j sumFunctionLoop
-
-
-	sumFunctionLoop:
-		add $t1, $t1, 1
-		add $t3, $t1, $t3
-		bne $t2, $t1, sumFunctionLoop
-		j sumAns
-
-
-	sumAns:
-		#print
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 1
-		move $a0, $t3
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-		j again
-
-	
-
-	powersFunction:
-		#var1Q
-		li $v0, 4
-		la $a0, varA
-		syscall
-		li $v0, 4
-		la $a0, powersText
-		syscall
-		li $v0, 5
-		syscall
-		move $t1, $v0
+			#operation
+			mul $t2, $t1, $t1
 		
-		#var2Q
-		li $v0, 4
-		la $a0, varB
-		syscall
-		li $v0, 4
-		la $a0, powersText
-		syscall
-		li $v0, 5
-		syscall
-		move $t2, $v0
-
-		#load my variables
-		mul $t3, $t1, $t1
-		sub $t4, $t2, 1
-
-		#exception handeling
-		beq $t2, 0, ans1
-		beq $t1, 0, ans0
-		beq $t2, 2, powersExceptionAns
-		bltz $t1, powersFunction
-		bltz $t2, powersFunction
-		j powersFunctionLoop
-
-
-	powersExceptionAns:
-		#operation
-		mul $t3, $t1, $t1
+			#print
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 1
+			move $a0, $t2
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
 	
-		#print
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 1
-		move $a0, $t3
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-
-		j again
-
-
-	powersFunctionLoop:
-		mul $t3, $t3, $t1
-		sub $t4, $t4, 1
-		beq $t4, 1, powersAns
-		j powersFunctionLoop
+			j again
 		
 		
+		factorialFunctionStart:
+			#var1Q
+			li $v0, 4
+			la $a0, factorialText
+			syscall
+			li $v0, 5
+			syscall
+			move $t1, $v0
+	
+			add $t7, $t1, 0
+			sub $t7, $t7, 1
+	
+			#special cases for factorial
+			bltz $t1, factorialFunctionStart
+			beq $t1, 0, ans1
+			beq $t1, 1, ans1
+			j factorialFunctionLoop
+	
+	
+		factorialFunctionLoop:
+			mul $t1, $t1, $t7
+			sub $t7, $t7, 1
+			bne $t7, 0, factorialFunctionLoop
+			j factorialAns
 
-	powersAns:
-		#print
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 1
-		move $a0, $t3
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-		j again
 
-
-	#special case function
-	ans1:
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 4
-		la $a0, one
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-		j again
+		factorialAns:
+			#print
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 1
+			move $a0, $t1
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+			j again
+	
+	
+		sumFunction:
+			#var1Q
+			li $v0, 4
+			la $a0, sumWarningText
+			syscall
+			li $v0, 4
+			la $a0, varA
+			syscall
+			li $v0, 4
+			la $a0, sumText
+			syscall
+			li $v0, 5
+			syscall
+			move $t1, $v0
+			
+			#var2Q
+			li $v0, 4
+			la $a0, varB
+			syscall
+			li $v0, 4
+			la $a0, sumText
+			syscall
+			li $v0, 5
+			syscall
+			move $t2, $v0
+	
+			#register set asside
+			add $t3, $t1, 0
+	
+			#Exception handling
+			bltz $t1, factorialFunctionStart
+			slt $t5, $t1, $t2
+			bne $t5, 1, sumFunction
+			j sumFunctionLoop
+	
+	
+		sumFunctionLoop:
+			add $t1, $t1, 1
+			add $t3, $t1, $t3
+			bne $t2, $t1, sumFunctionLoop
+			j sumAns
+	
+	
+		sumAns:
+			#print
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 1
+			move $a0, $t3
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+			j again
+	
+		
+	
+		powersFunction:
+			#var1Q
+			li $v0, 4
+			la $a0, varA
+			syscall
+			li $v0, 4
+			la $a0, powersText
+			syscall
+			li $v0, 5
+			syscall
+			move $t1, $v0
+			
+			#var2Q
+			li $v0, 4
+			la $a0, varB
+			syscall
+			li $v0, 4
+			la $a0, powersText
+			syscall
+			li $v0, 5
+			syscall
+			move $t2, $v0
+	
+			#load my variables
+			mul $t3, $t1, $t1
+			sub $t4, $t2, 1
+	
+			#exception handeling
+			beq $t2, 0, ans1
+			beq $t1, 0, ans0
+			beq $t2, 2, powersExceptionAns
+			bltz $t1, powersFunction
+			bltz $t2, powersFunction
+			j powersFunctionLoop
+	
+	
+		powersExceptionAns:
+			#operation
+			mul $t3, $t1, $t1
+		
+			#print
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 1
+			move $a0, $t3
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+	
+			j again
+	
+	
+		powersFunctionLoop:
+			mul $t3, $t3, $t1
+			sub $t4, $t4, 1
+			beq $t4, 1, powersAns
+			j powersFunctionLoop
 		
 		
 
-	#special case function
-	ans0:
-		li $v0, 4
-		la $a0, res
-		syscall
-		li $v0, 4
-		la $a0, zero
-		syscall
-		li $v0, 4
-		la $a0, spacer
-		syscall
-		j again
+		powersAns:
+			#print
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 1
+			move $a0, $t3
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+			j again
+	
+	
+		#special case function
+		ans1:
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 4
+			la $a0, one
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+			j again
+		
+		
 
+		#special case function
+		ans0:
+			li $v0, 4
+			la $a0, res
+			syscall
+			li $v0, 4
+			la $a0, zero
+			syscall
+			li $v0, 4
+			la $a0, spacer
+			syscall
+			j again
+	
+	
+		#asks user if they want to solve another equation
+		again:
+			li $v0, 4
+			la $a0, contQ
+			syscall
 
-	#asks user if they want to solve another equation
-	again:
-		li $v0, 4
-		la $a0, contQ
-		syscall
-
-		#read cont ques input
-		li $v0, 5
-		syscall
-		move $s0, $v0
-
-		#reloopQ
-		bne $s0, 1, goodbye
-		j loop
-
-
-	#terminate and exit program
-	goodbye:
-		li $v0, 4
-		la $a0, gB
-		syscall
-
-		li $v0, 10
-		syscall
+			#read cont ques input
+			li $v0, 5
+			syscall
+			move $s0, $v0
+	
+			#reloopQ
+			bne $s0, 1, goodbye
+			j loop
+	
+	
+		#terminate and exit program
+		goodbye:
+			li $v0, 4
+			la $a0, gB
+			syscall
+	
+			li $v0, 10
+			syscall
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
