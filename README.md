@@ -8,7 +8,7 @@ MaxiCalc is a comprehensive calculator program designed to perform a wide range 
 ## Key Features:
 
 ### 1. Calculator Functions:
-- **Arithmetic Operations**: Implement addition, subtraction, multiplication, division and modulo.
+- **Arithmetic Operations**: Implement addition, subtraction, multiplication, division (*with decimal part in result*) and modulo.
 - **Other Operations**: square, factorial, sum(m, n) and power.
 
 ### 2. Memory Functionality:
