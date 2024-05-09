@@ -27,6 +27,25 @@ MaxiCalc is a comprehensive calculator program designed to perform a wide range 
     - Division by zero
     - Overflow/underflow conditions
     - Other potential errors gracefully.
+
+ 
+## How to Use
+
+To utilize the MIPS calculator program, follow these steps:
+
+1. **Download the Files**: Download the project files from the repository.
+
+2. **Unzip the Files**: Extract the contents of the downloaded ZIP file to a directory of your choice.
+
+3. **Assemble the MIPS Code**:
+   - Locate the `mips3.asm` file in the extracted directory.
+   - Assemble the MIPS in MARS.
+
+4. **Execute the Program**: After assembling the code successfully, execute the resulting binary or load it into a MIPS simulator to run the calculator program.
+
+5. **Interact with the Calculator**: Follow the on-screen prompts to input numbers and select the desired operation.
+
+6. **Repeat or Exit**: After completing an operation, the program may prompt you to perform another calculation or exit. Follow the instructions accordingly.
    
     
 ---
