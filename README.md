@@ -23,7 +23,6 @@ MaxiCalc is a comprehensive calculator program designed to perform a wide range 
 
 
 ### 4. Error Handling:
-- **Error Handling**: 
     - Division by zero
     - Overflow/underflow conditions
     - Other potential errors gracefully.
