@@ -20,9 +20,7 @@ MaxiCalc is a comprehensive calculator program designed to perform a wide range 
   - Ensured ease of navigation through calculator functions and memory/history features.
 
 ### 4. Error Handling:
-- **Robust Error Handling**: 
-  - Implemented input validation to handle:
-    - Invalid inputs
+- **Error Handling**: 
     - Division by zero
     - Overflow/underflow conditions
     - Other potential errors gracefully.
