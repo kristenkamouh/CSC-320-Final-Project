@@ -17,9 +17,9 @@ MaxiCalc is a comprehensive calculator program designed to perform a wide range 
 ### 3. User Interface:
 - **User-Friendly Interface**: 
   - Implemented a text-based interface with menus and prompts for input and output.
-  - Ensured ease of navigation through calculator functions and memory/history features.
+  - Ensured ease of navigation through calculator functions and memory features.
  
-    <img width="134" alt="co" src="https://github.com/kristenkamouh/MaxiCalc/assets/63672174/b46b6cfb-ad66-411e-93f6-1972a4ab3cab">
+    <img width="200" alt="co" src="https://github.com/kristenkamouh/MaxiCalc/assets/63672174/b46b6cfb-ad66-411e-93f6-1972a4ab3cab">
 
 
 ### 4. Error Handling:
