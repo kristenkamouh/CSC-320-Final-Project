@@ -28,6 +28,7 @@ MaxiCalc is a comprehensive calculator program designed to perform a wide range 
     - Overflow/underflow conditions
     - Other potential errors gracefully.
 
+
  
 ## How to Use
 
