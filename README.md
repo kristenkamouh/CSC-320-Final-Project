@@ -51,8 +51,10 @@ To utilize the MIPS calculator program, follow these steps:
 # Extra 
 ## Calculator Background
 
-Inside the "extra" folder, you'll find a file named `background.asm`. This file contains the assembly code for rendering a background bitmap, which, when assembled with an appropriate bitmap image, creates a graphical calculator interface.
+Inside the "extra" folder, you'll find a file named `background.asm`. This file contains the assembly code for rendering a background bitmap, which, when assembled with an appropriate bitmap image (512x512), creates a graphical calculator interface.
+
 However, please note that due to time constraints, the calculator functionality has not been fully implemented. Assembling the `background.asm` file with a bitmap will display the calculator interface, but the calculator itself will not be operational.
+
 You can explore this feature further by providing the necessary bitmap image and completing the implementation of the calculator functionality.
    
     
